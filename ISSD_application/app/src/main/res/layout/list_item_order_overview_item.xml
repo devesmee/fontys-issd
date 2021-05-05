@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_item_order_overview_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/itemTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hardcoded_item"
+        android:textStyle="bold"
+        android:textSize="@dimen/item_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/big_margin"/>
+
+    <TextView
+        android:id="@+id/pickupItemTitle"
+        style="@style/Order_Overview_Info_Title"
+        android:text="@string/pickup_title"
+        app:layout_constraintStart_toStartOf="@id/itemTitle"
+        app:layout_constraintTop_toBottomOf="@id/itemTitle"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginStart="@dimen/margin_order_overview"/>
+
+    <TextView
+        android:id="@+id/pickupItemDate"
+        style="@style/Order_Overview_Info"
+        android:text="@string/hardcoded_date"
+        app:layout_constraintStart_toEndOf="@id/pickupItemTitle"
+        app:layout_constraintTop_toTopOf="@id/pickupItemTitle"
+        app:layout_constraintBottom_toBottomOf="@id/pickupItemTitle"
+        android:layout_marginStart="@dimen/medium_margin"/>
+
+    <TextView
+        android:id="@+id/pickupItemTime"
+        style="@style/Order_Overview_Info"
+        android:text="@string/hardcoded_time"
+        app:layout_constraintStart_toEndOf="@id/pickupItemDate"
+        app:layout_constraintTop_toTopOf="@id/pickupItemDate"
+        app:layout_constraintBottom_toBottomOf="@id/pickupItemDate"
+        android:layout_marginStart="@dimen/big_margin"/>
+
+    <ImageButton
+        android:id="@+id/pickupItemCalendarButton"
+        style="@style/Order_Overview_Calendar_Button"
+        app:layout_constraintTop_toTopOf="@id/pickupItemTitle"
+        app:layout_constraintBottom_toBottomOf="@id/pickupItemTitle"
+        app:layout_constraintStart_toEndOf="@id/pickupItemTime"
+        android:layout_marginStart="@dimen/big_margin"/>
+
+    <TextView
+        android:id="@+id/returnItemTitle"
+        style="@style/Order_Overview_Info_Title"
+        android:text="@string/return_title"
+        app:layout_constraintEnd_toEndOf="@id/pickupItemTitle"
+        app:layout_constraintTop_toBottomOf="@id/pickupItemTitle"
+        android:layout_marginTop="@dimen/big_margin" />
+
+    <TextView
+        android:id="@+id/returnItemDate"
+        style="@style/Order_Overview_Info"
+        android:text="@string/hardcoded_date"
+        app:layout_constraintStart_toStartOf="@id/pickupItemDate"
+        app:layout_constraintTop_toTopOf="@id/returnItemTitle"
+        app:layout_constraintBottom_toBottomOf="@id/returnItemTitle" />
+
+    <TextView
+        android:id="@+id/returnItemTime"
+        style="@style/Order_Overview_Info"
+        android:text="@string/hardcoded_time"
+        app:layout_constraintStart_toStartOf="@id/pickupItemTime"
+        app:layout_constraintTop_toTopOf="@id/returnItemDate"
+        app:layout_constraintBottom_toBottomOf="@id/returnItemDate"/>
+
+    <ImageButton
+        android:id="@+id/returnItemCalendarButton"
+        style="@style/Order_Overview_Calendar_Button"
+        app:layout_constraintTop_toTopOf="@id/returnItemTitle"
+        app:layout_constraintBottom_toBottomOf="@id/returnItemTitle"
+        app:layout_constraintStart_toStartOf="@id/pickupItemCalendarButton" />
+
+    <ImageButton
+        android:id="@+id/removeItemButton"
+        style="@style/Order_Overview_Remove_Button"
+        app:layout_constraintTop_toTopOf="@id/itemTitle"
+        app:layout_constraintBottom_toBottomOf="@id/itemTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/small_margin"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.EditReturnRequestFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/ToolBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/toolbar_margin_end">
+
+            <TextView
+                android:id="@+id/titleTab"
+                style="@style/Title_Toolbar"
+                android:text="@string/title_profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageButton
+                android:id="@+id/ibToCart"
+                android:src="@drawable/toolbar_cart"
+                style="@style/ImageButton_Toolbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_marginTop="@dimen/top_margin_fragment">
+
+        <TextView
+            android:id="@+id/editReturnRequestTitle"
+            style="@style/Title_Fragment"
+            android:text="@string/title_edit_return_request"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/itemImage"
+            android:layout_width="135dp"
+            android:layout_height="130dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/arduinoyun"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editReturnRequestTitle"
+            android:layout_marginTop="@dimen/medium_margin"/>
+
+        <TextView
+            android:id="@+id/itemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Arduino Yun"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/itemImage"
+            app:layout_constraintTop_toBottomOf="@id/itemImage"
+            app:layout_constraintEnd_toEndOf="@id/itemImage" />
+
+        <TextView
+            android:id="@+id/currentReturnDateTitle"
+            style="@style/Order_Overview_Info_Title"
+            android:text="@string/current_return_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/itemTitle"
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginStart="@dimen/top_margin_fragment"/>
+
+        <TextView
+            android:id="@+id/returnDate"
+            style="@style/Order_Overview_Info"
+            android:text="@string/hardcoded_date"
+            app:layout_constraintStart_toStartOf="@id/requestedReturnDate"
+            app:layout_constraintTop_toTopOf="@id/currentReturnDateTitle"
+            app:layout_constraintBottom_toBottomOf="@id/currentReturnDateTitle"/>
+
+        <TextView
+            android:id="@+id/returnTime"
+            style="@style/Order_Overview_Info"
+            android:text="@string/hardcoded_time"
+            app:layout_constraintStart_toEndOf="@id/returnDate"
+            app:layout_constraintTop_toTopOf="@id/returnDate"
+            app:layout_constraintBottom_toBottomOf="@id/returnDate"
+            android:layout_marginStart="@dimen/big_margin"/>
+
+        <TextView
+            android:id="@+id/requestReturnDateTitle"
+            style="@style/Order_Overview_Info_Title"
+            android:text="@string/requested_return_date"
+            app:layout_constraintStart_toStartOf="@id/currentReturnDateTitle"
+            app:layout_constraintTop_toBottomOf="@id/currentReturnDateTitle"
+            android:layout_marginTop="@dimen/big_margin" />
+
+        <TextView
+            android:id="@+id/requestedReturnDate"
+            style="@style/Order_Overview_Info"
+            android:text="@string/hardcoded_date"
+            app:layout_constraintStart_toEndOf="@id/requestReturnDateTitle"
+            app:layout_constraintTop_toTopOf="@id/requestReturnDateTitle"
+            app:layout_constraintBottom_toBottomOf="@id/requestReturnDateTitle"
+            android:layout_marginStart="@dimen/medium_margin"/>
+
+        <TextView
+            android:id="@+id/requestedReturnTime"
+            style="@style/Order_Overview_Info"
+            android:text="@string/hardcoded_time"
+            app:layout_constraintStart_toStartOf="@id/returnTime"
+            app:layout_constraintTop_toTopOf="@id/requestedReturnDate"
+            app:layout_constraintBottom_toBottomOf="@id/requestedReturnDate"/>
+
+        <ImageButton
+            android:id="@+id/requestedReturnCalendarButton"
+            style="@style/Order_Overview_Calendar_Button"
+            app:layout_constraintTop_toTopOf="@id/requestReturnDateTitle"
+            app:layout_constraintBottom_toBottomOf="@id/requestReturnDateTitle"
+            app:layout_constraintStart_toEndOf="@id/requestedReturnTime"
+            android:layout_marginStart="@dimen/big_margin"/>
+
+        <Button
+            android:id="@+id/sendEditReturnDateRequestButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_request_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/requestReturnDateTitle"
+            android:layout_marginTop="@dimen/big_margin"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

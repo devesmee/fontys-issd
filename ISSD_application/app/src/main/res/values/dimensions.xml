@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Toolbar -->
+    <dimen name="toolbar_margin_end">16dp</dimen>
+    <dimen name="toolbar_text_size">30sp</dimen>
+    <dimen name="toolbar_height">80dp</dimen>
+    <!-- Profile Fragment -->
+    <dimen name="icon_student_image">100dp</dimen>
+    <dimen name="student_name_margin">40dp</dimen>
+    <dimen name="student_name_text_size">26sp</dimen>
+    <dimen name="title_fragment_text_size">29sp</dimen>
+    <dimen name="report_issue_height">100dp</dimen>
+    <dimen name="report_issue_width">250dp</dimen>
+    <dimen name="list_view_borrowed_items_height">150dp</dimen>
+        <!-- Borrowed items List -->
+        <dimen name="list_item_borrowed_items_height">75dp</dimen>
+        <dimen name="borrowed_item_width">100dp</dimen>
+    <!-- Cart Fragment -->
+    <dimen name="list_view_order_overview_height">260dp</dimen>
+        <!-- Order Overview Item -->
+        <dimen name="list_item_order_overview_height">130dp</dimen>
+        <dimen name="calender_size">25dp</dimen>
+        <dimen name="remove_button_size">35dp</dimen>
+        <dimen name="margin_order_overview">60dp</dimen>
+    <!-- Bottom Navigation -->
+    <dimen name="design_bottom_navigation_icon_size" tools:override="true">35dp</dimen>
+    <dimen name="design_bottom_navigation_height" tools:override="true">75dp</dimen>
+    <dimen name="bottom_navigation_text_size">15sp</dimen>
+    <!-- Multiple Fragments -->
+    <dimen name="top_margin_fragment">30dp</dimen>
+    <dimen name="small_margin">5dp</dimen>
+    <dimen name="medium_margin">10dp</dimen>
+    <dimen name="big_margin">20dp</dimen>
+    <dimen name="item_text_size">20sp</dimen>
+    <dimen name="item_info_text_size">15sp</dimen>
+    <dimen name="empty_list_text_size">16sp</dimen>
+</resources>

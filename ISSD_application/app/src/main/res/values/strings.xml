@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">ISSD</string>
+    <string name="hardcoded_welcome">Welcome to the ISSD-Application!</string>
+    <!-- Items Overview Fragment -->
+    <string name="title_items">Items</string>
+    <string name="items_overview_fragment">This is the items overview fragment.</string>
+    <!-- Profile Fragment -->
+    <string name="title_profile">Profile</string>
+    <string name="profile_fragment">This is the profile fragment.</string>
+    <string name="hardcoded_first_name_student">Student</string>
+    <string name="hardcoded_last_name_student">Name</string>
+    <string name="title_borrowed_items">Borrowed items</string>
+    <string name="title_report_issue">Report an issue</string>
+    <string name="placeholder_report_issue">Please mention the item and the issue(s)</string>
+    <string name="report_button">Report</string>
+    <string name="empty_borrowed_items">There are no borrowed items</string>
+    <!-- Borrowed items List -->
+    <string name="hardcoded_item">Item</string>
+    <string name="until">until</string>
+    <string name="hardcoded_date">05/04/2021</string>
+    <string name="edit_button">Edit</string>
+    <!-- Cart Fragment -->
+    <string name="title_cart">Cart</string>
+    <string name="title_order_overview">Order overview</string>
+    <string name="submit_order_button">Submit order</string>
+    <string name="empty_order_overview">There are no items in your cart</string>
+    <string name="pickup_title">pick-up:</string>
+    <string name="return_title">return:</string>
+    <string name="hardcoded_time">15:00</string>
+    <!-- Edit Return Request Fragment -->
+    <string name="title_edit_return_request">Edit return date</string>
+    <string name="current_return_date">current return date:</string>
+    <string name="requested_return_date">requested return date:</string>
+    <string name="send_request_button">Send request</string>
+    <!-- Add Normal Item Cart -->
+    <string name="add_to_cart_title">Add to cart</string>
+    <string name="pick_a_date">pick a date</string>
+    <string name="pick_a_time">&amp; time</string>
+    <!-- Filter string -->
+    <string name="filter_title">Filter by…</string>
+    <string name="filter_technology">Technology</string>
+    <string name="filter_course">Course</string>
+    <string name="filter_in_stock">In stock</string>
+    <string name="filter_phones">Phones</string>
+    <string name="filter_tablets">Tablets</string>
+    <string name="filter_laptops">Laptops</string>
+    <string name="filter_chargers">Chargers</string>
+    <string name="filter_cameras">Cameras</string>
+    <string name="filter_robots">Robots</string>
+    <string name="filter_fis">Fis</string>
+    <string name="filter_prop">Pro-P</string>
+    <string name="filter_others">Others</string>
+</resources>

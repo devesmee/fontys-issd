@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ProfileFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/ToolBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/toolbar_margin_end">
+
+            <TextView
+                android:id="@+id/titleTab"
+                style="@style/Title_Toolbar"
+                android:text="@string/title_profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageButton
+                android:id="@+id/ibToCart"
+                android:src="@drawable/toolbar_cart"
+                style="@style/ImageButton_Toolbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scrollViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/studentInfoBlock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/scrollViewLayout">
+
+                <ImageView
+                    android:id="@+id/iconStudent"
+                    android:layout_width="@dimen/icon_student_image"
+                    android:layout_height="@dimen/icon_student_image"
+                    android:src="@drawable/default_profile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="@dimen/top_margin_fragment"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/studentNameBlock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/iconStudent"
+                    app:layout_constraintTop_toTopOf="@id/iconStudent"
+                    app:layout_constraintBottom_toBottomOf="@id/iconStudent"
+                    android:layout_marginStart="@dimen/student_name_margin">
+
+                    <TextView
+                        android:id="@+id/firstNameStudent"
+                        style="@style/Student_Name"
+                        android:text="@string/hardcoded_first_name_student"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/lastNameStudent"
+                        style="@style/Student_Name"
+                        android:text="@string/hardcoded_last_name_student"
+                        app:layout_constraintStart_toStartOf="@id/firstNameStudent"
+                        app:layout_constraintTop_toBottomOf="@id/firstNameStudent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/borrowedItemsBlock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/studentInfoBlock"
+                app:layout_constraintBottom_toTopOf="@id/reportIssueBlock"
+                android:layout_marginTop="@dimen/big_margin"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginEnd="@dimen/big_margin">
+
+                <TextView
+                    android:id="@+id/borrowedItemsTitle"
+                    style="@style/Title_Fragment"
+                    android:text="@string/title_borrowed_items"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/borrowedItemsBlock" />
+
+                <ListView
+                    android:id="@+id/listviewBorrowedItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/list_view_borrowed_items_height"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/borrowedItemsTitle"
+                    android:layout_marginTop="@dimen/medium_margin"/>
+
+                <TextView
+                    android:id="@+id/borrowedItemsEmptyText"
+                    style="@style/Empty_List_Text"
+                    android:text="@string/empty_borrowed_items"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/borrowedItemsTitle" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/reportIssueBlock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/borrowedItemsBlock"
+                android:layout_marginTop="@dimen/big_margin">
+
+                <TextView
+                    android:id="@+id/reportIssueTitle"
+                    style="@style/Title_Fragment"
+                    android:text="@string/title_report_issue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/reportIssueText"/>
+
+                <EditText
+                    android:id="@+id/reportIssueText"
+                    style="@style/Report_Issue_Text_Box"
+                    android:hint="@string/placeholder_report_issue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/reportIssueButton"
+                    android:layout_marginBottom="@dimen/medium_margin"/>
+
+                <Button
+                    android:id="@+id/reportIssueButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/report_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/reportIssueText"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

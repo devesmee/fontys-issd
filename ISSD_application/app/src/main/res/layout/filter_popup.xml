@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:background="@color/purple_fontys">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/filterLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/filterBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="@string/filter_title"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/inStock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:buttonTint="#FFFFFF"
+                android:checked="false"
+                android:text="@string/filter_in_stock"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/filterBy"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/filterBy"
+                app:layout_constraintTop_toBottomOf="@id/filterBy" />
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/technologyRelativeLayout"
+                app:layout_constraintEnd_toEndOf="@id/inStock"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/inStock"
+                app:layout_constraintTop_toBottomOf="@id/inStock" >
+
+                <TextView
+                    android:id="@+id/technology"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:buttonTint="#FFFFFF"
+                    android:checked="false"
+                    android:text="@string/filter_technology"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/arrowDownTechnology"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="30dp"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_arrow_drop_down"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/subMenuTechnology"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/technologyRelativeLayout"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/technologyRelativeLayout"
+                app:layout_constraintTop_toBottomOf="@id/technologyRelativeLayout" >
+
+                <CheckBox
+                    android:id="@+id/phones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#FFFFFF"
+                    android:checked="false"
+                    android:text="@string/filter_phones"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    />
+
+                <CheckBox
+                    android:id="@+id/tablets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#FFFFFF"
+                    android:checked="false"
+                    android:text="@string/filter_tablets"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_below="@id/phones"/>
+
+                <CheckBox
+                    android:id="@+id/laptops"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#FFFFFF"
+                    android:checked="false"
+                    android:text="@string/filter_laptops"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_below="@id/tablets"
+                    />
+
+                <CheckBox
+                    android:id="@+id/chargers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#FFFFFF"
+                    android:checked="false"
+                    android:text="@string/filter_chargers"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_below="@id/laptops"/>
+
+                <CheckBox
+                    android:id="@+id/cameras"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#FFFFFF"
+                    android:checked="false"
+                    android:text="@string/filter_cameras"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_below="@id/chargers"/>
+
+                <CheckBox
+                    android:id="@+id/robots"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#FFFFFF"
+                    android:checked="false"
+                    android:text="@string/filter_robots"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_below="@id/cameras"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/courseRelativeLayout"
+                app:layout_constraintLeft_toLeftOf="@id/subMenuTechnology"
+                app:layout_constraintTop_toBottomOf="@id/subMenuTechnology">
+
+                <TextView
+                    android:id="@+id/course"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:buttonTint="#FFFFFF"
+                    android:checked="false"
+                    android:text="@string/filter_course"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:id="@+id/arrowDownCourse"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="30dp"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_arrow_drop_down"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/subMenuCourse"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/courseRelativeLayout"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/courseRelativeLayout"
+                app:layout_constraintTop_toBottomOf="@id/courseRelativeLayout" >
+
+                <CheckBox
+                    android:id="@+id/fis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#FFFFFF"
+                    android:checked="false"
+                    android:text="@string/filter_fis"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/prop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#FFFFFF"
+                    android:checked="false"
+                    android:text="@string/filter_prop"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_below="@id/fis" />
+
+                <CheckBox
+                    android:id="@+id/others"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#FFFFFF"
+                    android:checked="false"
+                    android:text="@string/filter_others"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_below="@id/prop"/>
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
